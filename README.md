@@ -17,13 +17,17 @@ GPT algorithms are models that perform likelihood tests of what character to be 
 
 Therefore, let's use the main benefit of these models: their creativity. We will focus on trying to make an algorithm that is trained on non-factual data, in this case: kids stories.
 
-### Use-case, UX and flow:
-The idea is for parents to quickly generate a kids book text based on prompts/categories, and easily have a story to tell the kids at night time. To simplify deployment, we use: 
+## Use-case, UX and Flow.
+The idea is for parents to quickly generate a kids book text based on prompts/categories, and easily have a story to tell the kids at night time. To simplify deployment, we use:
 1. streamlit to deploy the algorithm in a webapp
 2. X site (TBD) to host the streamlit app
 
 
 
-#### Future potential monetisation:
-I don't want people to pay.
-Instead we're looking at getting "credits", where you can generate 10 books for $2. This means that even if you are not fully satisfied with 8 out of 10 books, it's still only $1 per book, with a potential of getting 10 kids book for $2 (20 cents per book, which is pretty good imo).
+### Future *(potential)* Monetisation
+No need to pay initially for the first version, but down the line for fun it would be interesting to incorporate a payment system if people like the service.
+
+**The challenge**: Paying for a single book that when generated maybe did not meet your full expectation: feels a bit sad (*at least it would to me*).
+
+**The solution**: A "credits" or "token" system instead, where you can generate 10 books for \$2. This means that even if you are not fully satisfied with 8 out of 10 books, it's still only \$1 per book, with a potential of getting 10 kids book for \$2 (20 cents per book, which is pretty good imo).
+
