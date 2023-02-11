@@ -1,5 +1,5 @@
 # Book-GPT
-## Problem statement:
+## Problem statement
 You are a parent and you've had a long day at work. You come home and want to spend some quality time with your kid and read them a bedtime story so they go to sleep. After reading the same story multiple times, you want to personalise/customise the stories to link what your child has done today and celebrate their achievements. Since you need a bit of "alone time" with your partner, we are also keen about the story being less than 30 minutes of reading time.
 
 Using Book-GPT and the dedicated website: you can now go onto the site and generate your custom kids book with a click of a few buttons.
@@ -18,9 +18,9 @@ GPT algorithms are models that perform likelihood tests of what character to be 
 Therefore, let's use the main benefit of these models: their creativity. We will focus on trying to make an algorithm that is trained on non-factual data, in this case: kids stories.
 
 ### Use-case, UX and flow:
-The idea is for parents to quickly generate a kids book text based on prompts/categories, and easily have a story to tell the kids at night time.
-
-To simplify deployment, we use streamlit to deploy the algorithm.
+The idea is for parents to quickly generate a kids book text based on prompts/categories, and easily have a story to tell the kids at night time. To simplify deployment, we use: 
+1. streamlit to deploy the algorithm in a webapp
+2. X site (TBD) to host the streamlit app
 
 
 

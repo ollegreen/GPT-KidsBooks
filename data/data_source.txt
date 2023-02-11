@@ -1,0 +1,4 @@
+Kaggle: https://www.kaggle.com/datasets/edenbd/children-stories-text-corpus?resource=download
+Gutenberg - Books in Children's Fiction: https://www.gutenberg.org/ebooks/bookshelf/18
+Gutenberg - Books in Children's Myths, Fairy Tales, etc. - https://www.gutenberg.org/ebooks/bookshelf/216
+Gutenberg - Picture books - https://www.gutenberg.org/ebooks/bookshelf/22
