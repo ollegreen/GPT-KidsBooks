@@ -5,7 +5,7 @@
 - [ ] get it loaded into model format (tensor or pandas) based on how the transformers work
 
 ### Model
-- [ ] build small model with well documented logic
+- [ ] build small model with well documented logic using Andrej Karpathy https://youtu.be/kCc8FmEb1nY
 - [ ] train small dataset to begin with before feeding in larger amounts
 
 ### post-processing
