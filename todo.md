@@ -5,6 +5,7 @@
 - [ ] get it loaded into model format (tensor or pandas) based on how the transformers work
 
 ### Model
+- [ ] write up transformer logic on sketch / note 
 - [ ] build small model with well documented logic using Andrej Karpathy https://youtu.be/kCc8FmEb1nY
 - [ ] train small dataset (tiny shakespear 1MB dataset) to begin with before feeding in larger amounts
 - [ ] feed in and train on larger dataset of books 
