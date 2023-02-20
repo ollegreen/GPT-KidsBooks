@@ -1,5 +1,6 @@
 ### data gathering
 - [ ] write a script to scrape kids book data from gutenberg picture books (example link to book [here](https://www.gutenberg.org/cache/epub/14872/pg14872-images.html))
+- [ ] get the shakespear data open source
 
 ### pre-processing
 - [ ] get it loaded into model format (tensor or pandas) based on how the transformers work
