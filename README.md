@@ -22,7 +22,9 @@ The idea is for parents to quickly generate a kids book text based on prompts/ca
 1. streamlit to deploy the algorithm in a webapp
 2. X site (TBD) to host the streamlit app
 
+## Deployment
 
+Streamlit is the most straight forward solution (whilst being free) to get it directly from github to a deployed ML app. Followed this documentation on how to get started and set it up: [link](https://blog.streamlit.io/host-your-streamlit-app-for-free/)
 
 ### Future *(potential)* Monetisation
 No need to pay initially for the first version, but down the line for fun it would be interesting to incorporate a payment system if people like the service.
