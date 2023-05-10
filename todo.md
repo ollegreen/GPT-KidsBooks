@@ -12,7 +12,7 @@
 - [ ] feed in and train on larger dataset of books 
 
 ### post-processing
-
+- [ ] .
 
 ### UX/UI
 - [ ] upload sketch of flow from Muse app. 
