@@ -1,4 +1,8 @@
-print("hello book.")
+import streamlit as st
 
-def insert_data():
-    print("hello again")
+st.write('Hello world!')
+
+#print("hello book.")
+
+#def insert_data():
+#    print("hello again")
