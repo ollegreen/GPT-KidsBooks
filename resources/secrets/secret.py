@@ -1,1 +1,1 @@
-the_secret_sauce = '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'
+the_secret_sauce = 'Bearer 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'
