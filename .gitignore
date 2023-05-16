@@ -1,2 +1,3 @@
 /data/kids_book_texts.txt
 .ipynb_checkpoints
+/resources/api/api_key.py
