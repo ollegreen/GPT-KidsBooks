@@ -10,8 +10,6 @@ from langchain.agents.agent_toolkits import (
     VectorStoreInfo
 )
 
-the_secret_sauce_openai = "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"
-
 os.environ['OPENAI_API_KEY'] = the_secret_sauce_openai
 
 # Create instance of OpenAI LLM
