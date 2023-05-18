@@ -1,22 +1,63 @@
 import os
-import requests
+from langchain.llms import OpenAI
 import streamlit as st
-#from resources.secrets.secret import the_secret_sauce
+from langchain.documents_loaders import PyPDFLoader
+from langchain.vectorstores import Chroma
 
-st.write('Hello unknown storyteller!')
+from langchain.agents.agent_toolkits import (
+    create_vectorstore_agent,
+    VectorStoreToolkit,
+    VectorStoreInfo
+)
 
-API_URL = "https://api-inference.huggingface.co/models/gpt2"
-headers = {"Authorization": f"Bearer {the_secret_sauce}"}
+the_secret_sauce_openai = "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"
 
-def query(payload):
-	response = requests.post(API_URL, headers=headers, json=payload)
-	return response.json()
+os.environ['OPENAI_API_KEY'] = the_secret_sauce_openai
 
-prompt = st.text_input('What story would you like?')
+# Create instance of OpenAI LLM
+llm = OpenAI(temperature=0.8, verbose=True)
 
+# Create and load PDF Loader
+loader = PyPDFLoader('data/kids_story.pdf')
 
+# Split pages from pdf
+pages = loader.load_and_split()
+
+# Load documents into vector database aka ChromaDB
+store = Chroma.from_documents(pages, collection_name='kids_story')
+
+# Create vectorstore info object - metadata repo?
+
+vectorstore_info = VectorStoreInfo(
+    name="kids_story",
+    description="a bedtime story for kids as a pdf",
+    vectorstore=store
+)
+
+# Convert the document store into a langchain toolkit
+toolkit = VectorStoreToolkit(vectorstore_info=vectorstore_info)
+
+# Add the toolkit to an end-to-end LC
+agent_executor = create_vectorstore_agent(
+    llm=llm,
+    toolkit=toolkit,
+    verbose=True
+)
+
+st.title('🦜🔗 GPT KidsBooks')
+# Create a text input box for the user
+prompt = st.text_input('Input your wanted storyline here')
+
+# If the user hits enter
 if prompt:
-    output = query({
-          "inputs": f"{prompt}",
-          })
-    st.write(output)
+    # Then pass the prompt to the LLM
+    response = agent_executor.run(prompt)
+    # ...and write it out to the screen
+    st.write(response)
+
+    # With a streamlit expander
+    with st.expander('Document Similarity Search'):
+        # Find the relevant pages
+        search = store.similarity_search_with_score(prompt)
+        # Write out the first
+        st.write(search[0][0].page_content)
