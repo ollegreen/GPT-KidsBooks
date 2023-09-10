@@ -33,3 +33,15 @@ No need to pay initially for the first version, but down the line for fun it wou
 
 **The solution**: A "credits" or "token" system instead, where you can generate 10 books for \$2. This means that even if you are not fully satisfied with 8 out of 10 books, it's still only \$1 per book, with a potential of getting 10 kids book for \$2 (20 cents per book, which is pretty good imo).
 
+
+## Training & Credit
+training data for the initial model exploration is from Andrej Karpathy:
+
+```python
+@misc{
+  author={Karpathy, Andrej},
+  title={char-rnn},
+  year={2015},
+  howpublished={\url{https://github.com/karpathy/char-rnn}}
+}
+```
